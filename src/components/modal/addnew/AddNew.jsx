@@ -196,7 +196,7 @@ return (
                                <S.FormNewArtImgCover htmlFor="file-upload1"></S.FormNewArtImgCover>
                             </S.FormNewArtImg>
                             <S.inputChange id="file-upload1" name="photo" type="file" placeholder="" onChange={handleImg} />
-                          {currentAd?.images[0]?.url ? (<S.BtnDelete onClick={() => delImg(images[0]?.url )}>Удалить</S.BtnDelete>) : null}
+
                               </S.ImageBlock>
                               <S.ImageBlock>
                             <S.FormNewArtImg >
@@ -205,7 +205,7 @@ return (
                                 <S.FormNewArtImgCover htmlFor="file-upload2"></S.FormNewArtImgCover>
                             </S.FormNewArtImg>
                             <S.inputChange id="file-upload2" name="photo" type="file" placeholder="" onChange={handleImg} />
-                            {currentAd?.images[1]?.url ? (<S.BtnDelete onClick = {deleteImg(images[1]?.url)}>Удалить</S.BtnDelete>) : null}
+
                             </S.ImageBlock>
                             <S.ImageBlock>
                             <S.FormNewArtImg >
@@ -214,7 +214,7 @@ return (
                                 <S.FormNewArtImgCover htmlFor="file-upload3"></S.FormNewArtImgCover>
                             </S.FormNewArtImg>
                             <S.inputChange id="file-upload3" name="photo" type="file" placeholder="" onChange={handleImg} />
-                            {currentAd?.images[2]?.url ? (<S.BtnDelete onClick = {deleteImg(images[2]?.url)}>Удалить</S.BtnDelete>) : null}
+
                             </S.ImageBlock>
                             <S.ImageBlock>
                             <S.FormNewArtImg >
@@ -223,7 +223,7 @@ return (
                                 <S.FormNewArtImgCover htmlFor="file-upload4"></S.FormNewArtImgCover>
                             </S.FormNewArtImg>
                             <S.inputChange id="file-upload4" name="photo" type="file" placeholder="" onChange={handleImg} />
-                            {currentAd?.images[3]?.url ? (<S.BtnDelete onClick = {deleteImg(images[3]?.url)}>Удалить</S.BtnDelete>) : null}
+
                             </S.ImageBlock>
                             <S.ImageBlock>
                             <S.FormNewArtImg >
@@ -232,7 +232,7 @@ return (
                                 <S.FormNewArtImgCover htmlFor="file-upload5"></S.FormNewArtImgCover>
                             </S.FormNewArtImg>
                             <S.inputChange id="file-upload5" name="photo" type="file" placeholder="" onChange={handleImg} />
-                            {currentAd?.images[4]?.url ? (<S.BtnDelete onClick = {deleteImg(images[4]?.url)}>Удалить</S.BtnDelete>) : null}
+
                             </S.ImageBlock>
                             </S.FormNewArtBarImg>
                         </S.FormNewArtBlock>
