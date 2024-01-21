@@ -1,0 +1,23 @@
+import { useEffect, useState } from "react";
+import * as S from "./AppStyle";
+import { AppRoutes } from './components/routes/routes';
+import { getAds } from "./api/apiAds";
+
+function App() {
+
+const [ads, setAds] = useState()
+
+const getAllAds = async () => {
+  const response = await getAds();
+  setAds(response);
+};
+
+useEffect(() => {
+  getAllAds();
+}, [ads]);
+  return (
+       <AppRoutes/>
+  );
+}
+
+export default App;
