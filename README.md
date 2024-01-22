@@ -32,6 +32,14 @@
 + Запустить приложение: npm run start; 
 + Откройте http://localhost:3000, чтобы просмотреть приложение.
 
+## Backend:
++ Для запуска бэкенда вам потребуется установить Docker.
++ Через терминал перейдите в папку back-skyVito.
++ Запустите в терминале команду: docker-compose -f docker-compose-backend.yaml up -d
++ После первого выполнения команды все образы подтянуться, но могут не запуститься, в этом случае повторно выполните команду: docker-compose -f docker-compose-backend.yaml up -d
++ После этого бэкенд и Swagger будут доступны по адресу http://localhost:8090/
++ Чтобы остановить работу бэкенда выполните:docker-compose down
+
 ## Визуал:
 
 ![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/6ab05ec7-ab7e-44c4-8769-5b32140f0828)
