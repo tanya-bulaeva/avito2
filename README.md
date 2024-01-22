@@ -33,5 +33,19 @@
 + Откройте http://localhost:3000, чтобы просмотреть приложение.
 
 ## Визуал:
+Главная страница
 ![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/6ab05ec7-ab7e-44c4-8769-5b32140f0828)
+
+Страница объявления
+![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/46072f96-d8c2-455a-85d9-570a51ad7450)
+
+Страница авторизации
+![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/8a5f00c2-4302-4a19-acd7-9def917d91e2)
+
+Личный кабинет
+![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/c102a210-8ef0-464b-b786-96b0e92b3cf4)
+
+Создание объявления
+![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/985e2cdc-527c-4c17-8042-8be08c4d6722)
+
 
