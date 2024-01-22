@@ -31,3 +31,7 @@
 + Установить заисимости: npm install;
 + Запустить приложение: npm run start; 
 + Откройте http://localhost:3000, чтобы просмотреть приложение.
+
+## Визуал:
+![image](https://github.com/tanya-bulaeva/avito2/assets/131000104/6ab05ec7-ab7e-44c4-8769-5b32140f0828)
+
