@@ -10,7 +10,7 @@ export default function Footer ({handleModal, modal}){
                     <img src="/img/icon_01.png" alt="home"/>
                 </Link>
             </S.FooterImg>
-            <S.FooterImg onClick={handleModal} modal={modal}>
+            <S.FooterImg >
                     <img src="/img/icon_02.png" alt="home"/>
             </S.FooterImg>
             <S.FooterImg>
