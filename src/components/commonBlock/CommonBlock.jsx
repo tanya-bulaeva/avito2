@@ -1,5 +1,5 @@
 import * as S from "./style";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../store/selectors/user";
@@ -14,7 +14,8 @@ const user = useSelector(selectUser)
 
 const dispatch = useDispatch();
 const navigate = useNavigate();
-
+const location = useLocation();
+const isProfilePage = location.pathname === "/profile"
 const [modal, setModal] = useState(false);
 const [modalRedact, setModalRedact] = useState(false);
 const handleModal = () => setModal((prev) => !prev);
@@ -44,11 +45,15 @@ const pass = localStorage.getItem('userPassword');
                     </S.LogoMobLink>
                 </S.HeaderLogo>
                  {user.id ? (
-                 <><S.HeaderBtnPutAd className=" btn-hov01" id="btputAd" onClick={handleModal}>Разместить объявление</S.HeaderBtnPutAd>
-                 <NavLink to = "/profile"><S.HeaderBtnLk className=" btn-hov01" id="btnlk">Личный кабинет</S.HeaderBtnLk>
-                 </NavLink>
-                 <S.HeaderBtnLk className="btn-hov02" id="logout" onClick={logout}>Выйти из&nbsp;профиля</S.HeaderBtnLk>
- </>)
+                  isProfilePage ? (<><S.HeaderBtnPutAd className=" btn-hov01" id="btputAd" onClick={handleModal}>Разместить объявление</S.HeaderBtnPutAd>
+                  <NavLink to = "/profile"><S.HeaderBtnLk className=" btn-hov01" id="btnlk">Личный кабинет</S.HeaderBtnLk>
+                  </NavLink>
+                  <S.HeaderBtnLk className="btn-hov02" id="logout" onClick={logout}>Выйти из&nbsp;профиля</S.HeaderBtnLk>
+  </>
+) : ( <><NavLink to = "/profile"><S.HeaderBtnLk className=" btn-hov01" id="btnlk">Личный кабинет</S.HeaderBtnLk>
+                  </NavLink>
+                  </>) 
+                )
                  : 
                 (<NavLink to = "/login"><S.Btn className="btn-hov01" id="btnMainEnter">Вход в личный кабинет</S.Btn></NavLink>)}
 

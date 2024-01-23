@@ -292,11 +292,11 @@ height: 480px;
 background-color: transparent;
 margin: 0 5px;
 img {
-    width: 100%;
-    height: auto;
+    width: 480px;
+    height: 480px;
     display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 @media screen and (max-width: 768px) {
     width: 100%;
@@ -344,12 +344,12 @@ background-color: transparent;
 border: 2px solid #F0F0F0;
 margin: 0 5px;
 img {
-    width: 100%;
-    height: auto;
+    width: 88px;
+    height: 88px;
     display: block;
     cursor: pointer;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
 
 }
 :hover{

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { pageAdsSelector, passwordSelector, selectorUpdate } from "../../store/selectors/ads";
 import { useState } from "react";
 import { setAdsPage } from "../../store/slices/adsSlice";
-import { getAds} from "../../api/apiAds";
+import { getAds } from "../../api/apiAds";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { Card } from "../../components/card/Card";

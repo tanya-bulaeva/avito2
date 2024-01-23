@@ -458,7 +458,7 @@ display: block;
 width: 100%;
 height: auto;
 -o-object-fit: cover;
-   object-fit: cover;
+ object-fit: cover;
 z-index: 2;
 }
 @media screen and (max-width: 600px) {
@@ -614,7 +614,6 @@ export const error = styled.div`
 export const ImageBlock = styled.div`
 display: flex;
 flex-direction: column;
-height: 120px;
 `
 export const BtnDelete = styled.button`
 margin-top: 10px;

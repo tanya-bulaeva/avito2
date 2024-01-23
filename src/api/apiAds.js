@@ -112,23 +112,23 @@ export async function getAds(params) {
     return userPhoto;
   }
 
-  export async function getAdsUser(){
-    let accessToken = localStorage.getItem("access_token");
-    if (isExpired(accessToken)) {
-      await newToken();
-      accessToken = localStorage.getItem("access_token");
-    }
-    const response = await fetch(`{baseHost}/ads/me`, {
-      method: "GET",
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
-        "content-type": "application/json",
-      },
-    })
-    const data = await response.json()
-    //console.log(data)
-    return data
-  }
+  // export async function getAdsUser(){
+  //   let accessToken = localStorage.getItem("access_token");
+  //   if (isExpired(accessToken)) {
+  //     await newToken();
+  //     accessToken = localStorage.getItem("access_token");
+  //   }
+  //   const response = await fetch(`${baseHost}/ads/me`, {
+  //     method: "GET",
+  //     headers: {
+  //       Authorization: `Bearer ${accessToken}`,
+  //       "content-type": "application/json",
+  //     },
+  //   })
+  //   const data = await response.json()
+  //   console.log(data)
+  //   return data
+  // }
 
 
   export async function getAdComments(params, ad_id) {

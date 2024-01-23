@@ -1,18 +1,19 @@
 import * as S from "./style";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {  selectUser } from "../../store/selectors/user";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useMemo, useState } from "react";
 import { Card } from "../../components/card/Card";
-import {  setUser } from "../../store/slices/userSlice";
-import { ChangeUserPassword, getAds,  getAdsUser,  patchUser, postNewUserPhoto } from "../../api/apiAds";
+import {  removeUser, setUser } from "../../store/slices/userSlice";
+import { ChangeUserPassword, getAds,   patchUser, postNewUserPhoto } from "../../api/apiAds";
 import {  selectorUpdate } from "../../store/selectors/ads";
-import { setUpdate, setUserPassword } from "../../store/slices/adsSlice";
+import { removeUserPassword, setUpdate, setUserPassword } from "../../store/slices/adsSlice";
 
 
 export default function Profile(){
   const [userAds, setUserAds] = useState();
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const user = useSelector(selectUser);
   const setCurrentUser = (value) => dispatch(setUser(value));
   const Update = useSelector(selectorUpdate);  
@@ -176,6 +177,14 @@ export default function Profile(){
           try {
             await ChangeUserPassword(passwordOld, newPassword);
             dispatch(setUserPassword(newPassword))
+              localStorage.removeItem("access_token");
+              localStorage.removeItem("refresh_token");
+              localStorage.removeItem("user");
+              sessionStorage.removeItem("updatedToken");
+              localStorage.removeItem("userPassword");
+              dispatch(removeUser());
+              dispatch(removeUserPassword())
+              navigate('/login')
           } catch (error) {
             setError(error.message);
           } finally {

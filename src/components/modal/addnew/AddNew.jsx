@@ -22,6 +22,7 @@ const [errorsForm, setErrorsForm] = useState({
   });
   const validateForm = () => {
     let isValid = true;
+    const pricePattern = /^(\d*([.,](?=\d{3}))?\d+)+((?!\2)[.,]\d\d)?$/;
     const newErrors = { ...errorsForm };
 
     if (title.trim() === "") {
@@ -41,10 +42,14 @@ const [errorsForm, setErrorsForm] = useState({
       if (price.trim() === "") {
         newErrors.price = "Введите цену товара";
         isValid = false;
+      }else if (!pricePattern.test(price)) {
+        newErrors.price= "Цена не должна быть отрицательной";
+        isValid = false;
       } else {
         newErrors.price = "";
       }
 
+  
     setErrorsForm(newErrors);
 
     return isValid;
@@ -74,9 +79,9 @@ const [errorsForm, setErrorsForm] = useState({
 
 
 const handleNewAd = async () => {
-    setLoading(true)
+    
     if (validateForm ()){
-
+    setLoading(true)
   try {
     const ad = await newAd(title, description, price)
     const keys = Object.keys(images)
@@ -103,7 +108,10 @@ const handleNewAd = async () => {
 
 }
 const handleChangeAd = async () => {
-    setLoading(true)
+
+    
+    if (validateForm ()){
+    setLoading(true)  
     const ad = await patchAd({title, description, price}, currentAd.id)
     const keys = Object.keys(images)
     if (keys.length > 0) {
@@ -119,7 +127,7 @@ const handleChangeAd = async () => {
         setNewAd (data);
       });
     setLoading(false)
-
+    }
 }
 const handleImg = (event) => {
     event.preventDefault();
@@ -132,19 +140,8 @@ const handleImg = (event) => {
  
 }
 
+//console.log(currentAd.images.length);
 
-const deleteImg = async (url) => {
-  try {
-  console.log('удаление');
-  delImg(currentAd.id,url)
-  handleModal()
-  await getAds().then((data) => {
-      setNewAd (data);
-    }); 
-  } catch (error)  {
-    setError(error?.message)
-}
-}
 return (
     <S.Wrapper style={{ visibility: modal ? "visible" : "hidden" }}>
         <S.Backdrop onClick={handleModal} />
