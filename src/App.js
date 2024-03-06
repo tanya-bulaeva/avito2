@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import * as S from "./AppStyle"
 import { AppRoutes } from "./components/routes/routes"
 import { getAds } from "./api/apiAds"
 

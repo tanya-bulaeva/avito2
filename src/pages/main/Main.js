@@ -12,7 +12,6 @@ import { getAds } from "../../api/apiAds"
 import { useRef } from "react"
 import { useEffect } from "react"
 import { Card } from "../../components/card/Card"
-import { setUpdate } from "../../store/slices/adsSlice"
 
 export default function Main() {
     const dispatch = useDispatch()
@@ -106,7 +105,7 @@ export default function Main() {
                                 )
                             }}
                         />
-                        <S.SearchBtn className="btn-hov02" onClick={filterAds}>
+                        <S.SearchBtn  onClick={filterAds}>
                             Найти
                         </S.SearchBtn>
                     </S.SearchForm>

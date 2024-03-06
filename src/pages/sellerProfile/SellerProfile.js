@@ -66,7 +66,6 @@ export default function SellerProfile() {
                                 <NavLink to="/">
                                     <S.MenuForm action="#">
                                         <S.MenuBtn
-                                            className="btn-hov02"
                                             id="btnGoBack"
                                         >
                                             Вернуться на&nbsp;главную
@@ -122,12 +121,11 @@ export default function SellerProfile() {
                                                 </S.SellerImgMob>
                                             </S.SellerImgMobBlock>
                                             {!user?.phone ? (
-                                                <S.SellerBtn className=" btn-hov02">
+                                                <S.SellerBtn>
                                                     Телефон не указан
                                                 </S.SellerBtn>
                                             ) : isOpen ? (
                                                 <S.SellerBtn
-                                                    className=" btn-hov02"
                                                     onClick={togglePhone}
                                                 >
                                                     Показать&nbsp;телефон
@@ -135,7 +133,6 @@ export default function SellerProfile() {
                                                 </S.SellerBtn>
                                             ) : (
                                                 <S.SellerBtn
-                                                    className=" btn-hov02"
                                                     onClick={togglePhone}
                                                 >
                                                     Показать&nbsp;телефон

@@ -97,7 +97,7 @@ export default function Login() {
                             </S.ModalLogo>
                         </NavLink>
                         {errorsForm.email && (
-                            <S.error>{errorsForm.email}</S.error>
+                            <S.Error>{errorsForm.email}</S.Error>
                         )}
                         <S.ModalInputLogin
                             type="text"
@@ -111,7 +111,7 @@ export default function Login() {
                         />
 
                         {errorsForm.password && (
-                            <S.error>{errorsForm.password}</S.error>
+                            <S.Error>{errorsForm.password}</S.Error>
                         )}
                         <S.ModalInput
                             type="password"
@@ -124,7 +124,7 @@ export default function Login() {
                                 setPassword(event.target.value)
                             }}
                         />
-                        {error && <S.error>{error}</S.error>}
+                        {error && <S.Error>{error}</S.Error>}
                         <S.ModalBtnEnter
                             id="btnEnter"
                             onClick={handleLogin}

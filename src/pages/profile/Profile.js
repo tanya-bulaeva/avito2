@@ -209,16 +209,12 @@ export default function Profile() {
 
                             <S.MenuForm>
                                 <NavLink to="/">
-                                    <S.MenuBtn
-                                        className="btn-hov02"
-                                        id="btnGoBack"
-                                    >
+                                    <S.MenuBtn id="btnGoBack">
                                         Вернуться на&nbsp;главную
                                     </S.MenuBtn>
                                 </NavLink>
                             </S.MenuForm>
                         </S.MainMenu>
-
                         <S.MainH2>
                             Здравствуйте, {!user.name ? user.email : user.name}!
                         </S.MainH2>
@@ -228,6 +224,7 @@ export default function Profile() {
                                 <S.ProfileTitle>
                                     Настройки профиля
                                 </S.ProfileTitle>
+
                                 <S.ProfileSetting>
                                     <S.SettingsLeft>
                                         {!user?.avatar ? (
@@ -318,7 +315,6 @@ export default function Profile() {
                                                     : ""}
                                             </p>
                                             <S.SettingsBtn
-                                                className="btn-hov02"
                                                 id="password-btn"
                                                 onClick={changeUserInfo}
                                                 disabled={buttonDisabled}
@@ -337,16 +333,15 @@ export default function Profile() {
                                     <S.ProfileTitle>
                                         Сменить пароль
                                     </S.ProfileTitle>
-                                    <S.SettingsLeft></S.SettingsLeft>
                                     <S.SettingsRight>
                                         <S.SettingsDiv>
                                             <label htmlFor="phone">
                                                 Пароль
                                             </label>
                                             {errorsForm.confirmPassword && (
-                                                <S.error>
+                                                <S.Error>
                                                     {errorsForm.confirmPassword}
-                                                </S.error>
+                                                </S.Error>
                                             )}
 
                                             <S.SettingInfo
@@ -368,9 +363,9 @@ export default function Profile() {
                                                 Повторите пароль
                                             </label>
                                             {errorsForm.newPassword && (
-                                                <S.error>
+                                                <S.Error>
                                                     {errorsForm.newPassword}
-                                                </S.error>
+                                                </S.Error>
                                             )}
                                             <S.SettingInfo
                                                 id="settings-password2"
@@ -386,9 +381,8 @@ export default function Profile() {
                                                 }}
                                             />
                                         </S.SettingsDiv>
-                                        {error && <S.error>{error}</S.error>}
+                                        {error && <S.Error>{error}</S.Error>}
                                         <S.SettingsBtn
-                                            className="btn-hov02"
                                             id="settings-btn"
                                             onClick={() =>
                                                 handleChangePassword()

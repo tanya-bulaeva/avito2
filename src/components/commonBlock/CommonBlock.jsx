@@ -1,15 +1,12 @@
 import * as S from "./style"
 import { NavLink, useLocation, useNavigate } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { selectUser } from "../../store/selectors/user"
 import AddNew from "../modal/addnew/AddNew"
 import { removeUser } from "../../store/slices/userSlice"
 import Footer from "../footer/Footer"
-import {
-    removeUserPassword,
-    setUserPassword,
-} from "../../store/slices/adsSlice"
+import { removeUserPassword } from "../../store/slices/adsSlice"
 
 export default function CommonBlock({ children }) {
     const user = useSelector(selectUser)
@@ -23,9 +20,6 @@ export default function CommonBlock({ children }) {
     const handleModal = () => setModal((prev) => !prev)
     const handleRedact = () => setModalRedact((prev) => !prev)
     const pass = localStorage.getItem("userPassword")
-    // useEffect(() => {
-    //     dispatch(setUserPassword(pass))
-    // })
     const logout = () => {
         localStorage.removeItem("access_token")
         localStorage.removeItem("refresh_token")
@@ -53,35 +47,30 @@ export default function CommonBlock({ children }) {
                             isProfilePage ? (
                                 <>
                                     <S.HeaderBtnPutAd
-                                        className=" btn-hov01"
                                         id="btputAd"
                                         onClick={handleModal}
                                     >
                                         Разместить объявление
                                     </S.HeaderBtnPutAd>
                                     <NavLink to="/profile">
-                                        <S.HeaderBtnLk
-                                            className=" btn-hov01"
-                                            id="btnlk"
-                                        >
+                                        <S.HeaderBtnLk id="btnlk">
                                             Личный кабинет
                                         </S.HeaderBtnLk>
                                     </NavLink>
-                                    <S.HeaderBtnLk
-                                        className="btn-hov02"
+                                    <S.HeaderBtnLk id="logout" onClick={logout}>
+                                        Выйти из&nbsp;профиля
+                                    </S.HeaderBtnLk>
+                                    <S.HeaderBtnLkMob
                                         id="logout"
                                         onClick={logout}
                                     >
-                                        Выйти из&nbsp;профиля
-                                    </S.HeaderBtnLk>
+                                        Выйти
+                                    </S.HeaderBtnLkMob>
                                 </>
                             ) : (
                                 <>
                                     <NavLink to="/profile">
-                                        <S.HeaderBtnLk
-                                            className=" btn-hov01"
-                                            id="btnlk"
-                                        >
+                                        <S.HeaderBtnLk id="btnlk">
                                             Личный кабинет
                                         </S.HeaderBtnLk>
                                     </NavLink>
@@ -89,7 +78,7 @@ export default function CommonBlock({ children }) {
                             )
                         ) : (
                             <NavLink to="/login">
-                                <S.Btn className="btn-hov01" id="btnMainEnter">
+                                <S.Btn id="btnMainEnter">
                                     Вход в личный кабинет
                                 </S.Btn>
                             </NavLink>

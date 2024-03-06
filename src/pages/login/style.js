@@ -20,6 +20,7 @@ export const ModalBlock = styled.div`
     left: calc(50% - (366px / 2));
     top: calc(50% - (439px / 2));
     opacity: 1;
+
     @media screen and (max-width: 768px) {
         position: absolute;
         z-index: 2;
@@ -45,9 +46,11 @@ export const ModalFormLogin = styled.form`
     -ms-flex-align: center;
     align-items: center;
     padding: 43px 47px 47px 40px;
+
     input:first-child {
         margin-bottom: 30px;
     }
+
     @media screen and (max-width: 768px) {
         width: 320px;
         height: auto;
@@ -72,6 +75,7 @@ export const ModalLogo = styled.div`
     height: 21px;
     margin-bottom: 34px;
     background-color: transparent;
+
     img {
         width: 140px;
         height: auto;
@@ -82,6 +86,7 @@ export const ModalLogo = styled.div`
         height: 18px;
         margin-bottom: 30px;
         background-color: transparent;
+
         img {
             width: 120px;
             height: auto;
@@ -94,9 +99,11 @@ export const ModalInput = styled.input`
     border-top: none;
     border-left: none;
     border-right: none;
+    border: none;
     border-bottom: 1px solid #d0cece;
     padding: 8px 1px;
-    ::-webkit-input-placeholder {
+
+    &::-webkit-input-placeholder {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -105,15 +112,7 @@ export const ModalInput = styled.input`
         color: #d0cece;
     }
 
-    :-ms-input-placeholder {
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.05px;
-        color: #d0cece;
-    }
-    ::-ms-input-placeholder {
+    &:-ms-input-placeholder {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -122,7 +121,16 @@ export const ModalInput = styled.input`
         color: #d0cece;
     }
 
-    ::placeholder {
+    &::-ms-input-placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: -0.05px;
+        color: #d0cece;
+    }
+
+    &::placeholder {
         font-style: normal;
         font-weight: 400;
         font-size: 18px;
@@ -137,28 +145,31 @@ export const ModalInput = styled.input`
         padding: 9px 17px;
         border-radius: 30px;
 
-        ::-webkit-input-placeholder {
+        &::-webkit-input-placeholder {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 21px;
             color: #b3b3b3;
         }
-        :-ms-input-placeholder {
+
+        &:-ms-input-placeholder {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 21px;
             color: #b3b3b3;
         }
-        ::-ms-input-placeholder {
+
+        &::-ms-input-placeholder {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
             line-height: 21px;
             color: #b3b3b3;
         }
-        ::placeholder {
+
+        &::placeholder {
             font-style: normal;
             font-weight: 400;
             font-size: 14px;
@@ -169,6 +180,7 @@ export const ModalInput = styled.input`
 `
 export const ModalInputLogin = styled(ModalInput)`
     margin-bottom: 30px;
+
     @media screen and (max-width: 768px) {
         margin-bottom: 14px;
     }
@@ -192,98 +204,77 @@ export const ModalBtnEnter = styled.button`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    a {
-        width: 100%;
-        height: 100%;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 24px;
-        letter-spacing: -0.05px;
-        color: #ffffff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-    }
-    :hover {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #ffffff;
+
+    &:hover {
         background-color: #0080c1;
     }
-    :active {
+
+    &:active {
         background-color: #0080c1;
     }
+
     @media screen and (max-width: 768px) {
         height: 46px;
         margin-top: 40px;
         margin-bottom: 10px;
         border: none;
-
-        a {
-            font-size: 16px;
-            line-height: 24px;
-        }
+        font-size: 16px;
+        line-height: 24px;
     }
 `
 
 export const ModalBtnSignup = styled.button`
-width: 278px;
-height: 52px;
-background-color: transparent;
-border: 1px solid #D0CECE;
-border-radius: 6px;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-letter-spacing: -0.05px;
-color: #000000;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-}
- a {
-width: 100%;
-height: 100%;
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 24px;
-letter-spacing: -0.05px;
-color: #000000;
-display: -webkit-box;
-display: -ms-flexbox;
-display: flex;
--webkit-box-align: center;
-    -ms-flex-align: center;
-        align-items: center;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
-}
-:hover {
-    background-color: #F4F5F6;
-  }
-  
-:active {
-    background-color: #D9D9D9;
-  }
-  
-`
-export const error = styled.div`
+    width: 278px;
+    height: 52px;
+    background-color: transparent;
+    border: 1px solid #d0cece;
+    border-radius: 6px;
+    font-style: normal;
+    font-weight: 400;
     font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: #f4f5f6;
+    }
+
+    &:active {
+        background-color: #d9d9d9;
+    }
+
+    @media screen and (max-width: 768px) {
+        height: 46px;
+        border: 1px solid #d9d9d9;
+        font-size: 16px;
+        line-height: 24px;
+    }
+`
+export const Error = styled.div`
+    font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     font-family: "Roboto", sans-serif;
     color: #dd4333;
+
+    @media screen and (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 `

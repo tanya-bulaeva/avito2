@@ -37,7 +37,6 @@ export default function Article() {
                 ),
             )
         }
-        // console.log(ad?.images?.length);
         return ad
     }, [AllAds, params.id])
 
@@ -105,12 +104,11 @@ export default function Article() {
                             </S.MenuLogoLink>
                             <S.MenuForm action="#">
                                 <NavLink to="/">
-                                    <S.MenuBtnSerch
-                                        className="btn-hov02"
+                                    <S.MenuBtnSearch
                                         id="btnGoBack"
                                     >
                                         Вернуться на главную
-                                    </S.MenuBtnSerch>
+                                    </S.MenuBtnSearch>
                                 </NavLink>
                             </S.MenuForm>
                         </S.MainMenu>
@@ -200,10 +198,7 @@ export default function Article() {
                                             Телефон не указан
                                         </S.ArticleBtn>
                                     ) : (
-                                        <S.ArticleBtn
-                                            className="btn-hov02"
-                                            onClick={togglePhone}
-                                        >
+                                        <S.ArticleBtn onClick={togglePhone}>
                                             Показать&nbsp;телефон{" "}
                                             {isOpen ? (
                                                 <span id="phone">

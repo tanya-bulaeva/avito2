@@ -7,95 +7,28 @@ export const Container = styled.div`
     margin: 0 auto;
     background-color: #ffffff;
 
-    @media screen and (max-width: 590px) {
+    @media screen and (max-width: 620px) {
         width: 100%;
         min-width: 320px;
-        min-height: 100vh;
-        background-color: #ffffff;
     }
 `
 
-export const Header = styled.header`
-    background-color: #009ee4;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
-export const HeaderNav = styled.nav`
-    max-width: 1178px;
-    margin: 0 auto;
-    padding: 0 10px;
-    height: 79px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-`
-export const HeaderLogo = styled.div`
-    display: none;
-    @media screen and (max-width: 590px) {
-        display: block;
-    }
-`
-export const LogoMobLink = styled.a`
-    @media screen and (max-width: 590px) {
-        display: block;
-        width: 32px;
-        height: 32px;
-    }
-`
-export const LogoMobImg = styled.a`
-    @media screen and (max-width: 590px) {
-        width: 32px;
-        height: auto;
-        display: block;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-`
-export const HeaderBtnPutAd = styled.button`
-    width: 232px;
-    height: 40px;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
-export const HeaderBtnLk = styled.button`
-    width: 173px;
-    height: 40px;
-    margin-left: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
 export const Main = styled.div``
 export const MainContainer = styled.div`
     max-width: 1178px;
     margin: 0 auto;
     padding: 0px 10px 79px;
+
+    @media screen and (max-width: 890px) {
+        padding: 34px 0px 84px;
+    }
 `
 export const MainCenterBlock = styled.div`
     @media screen and (max-width: 890px) {
         margin: 0 auto;
         padding: 0 20px;
     }
+
     @media screen and (max-width: 620px) {
         margin: 0 auto;
         padding: 0 20px;
@@ -105,6 +38,7 @@ export const MainCenterBlock = styled.div`
 export const MainContent = styled.div`
     width: 100%;
     margin: 0 auto;
+
     @media screen and (max-width: 620px) {
         width: 100%;
         margin: 0 auto;
@@ -124,6 +58,7 @@ export const MainMenu = styled.div`
     padding: 11px 0;
     width: 100%;
     padding: 31px 10px 64px;
+
     @media screen and (max-width: 620px) {
         display: none;
     }
@@ -154,6 +89,10 @@ export const MenuBtn = styled.button`
     font-size: 16px;
     line-height: 1;
     color: #ffffff;
+
+    &:hover {
+        background-color: #0080c1;
+    }
 `
 export const MainH2 = styled.h2`
     font-style: normal;
@@ -162,6 +101,7 @@ export const MainH2 = styled.h2`
     line-height: 42px;
     color: #000000;
     margin-bottom: 30px;
+
     @media screen and (max-width: 620px) {
         font-size: 24px;
         line-height: 29px;
@@ -173,6 +113,7 @@ export const MainH2 = styled.h2`
 export const MainProfile = styled.div`
     width: 100%;
     padding: 0 0 70px;
+
     @media screen and (max-width: 620px) {
         width: 100%;
         padding: 0 0 40px;
@@ -180,6 +121,7 @@ export const MainProfile = styled.div`
 `
 export const ProfileContent = styled.div`
     max-width: 834px;
+
     @media screen and (max-width: 890px) {
         max-width: 834px;
         width: 100%;
@@ -192,6 +134,7 @@ export const ProfileTitle = styled.h3`
     line-height: 70px;
     font-weight: 500;
     color: #000000;
+
     @media screen and (max-width: 620px) {
         font-size: 18px;
         line-height: 1;
@@ -207,6 +150,7 @@ export const ProfileSetting = styled.div`
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+
     @media screen and (max-width: 890px) {
         -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -217,6 +161,11 @@ export const ProfileSettingPass = styled(ProfileSetting)`
     -webkit-box-pack: flex-start;
     -ms-flex-pack: flex-start;
     justify-content: flex-start;
+
+    @media screen and (max-width: 890px) {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
 `
 export const SettingsLeft = styled.div`
     display: -webkit-box;
@@ -230,6 +179,7 @@ export const SettingsLeft = styled.div`
     -ms-flex-align: center;
     align-items: center;
     margin-right: 43px;
+
     @media screen and (max-width: 620px) {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -250,6 +200,7 @@ export const SettingImg = styled.div`
     height: 170px;
     border-radius: 50%;
     background-color: #f0f0f0;
+
     img {
         width: 100%;
         height: auto;
@@ -288,6 +239,7 @@ export const SettingsChangePhoto = styled.label`
 
 export const SettingsRight = styled.div`
     width: 630px;
+
     @media screen and (max-width: 620px) {
         width: 100%;
     }
@@ -299,6 +251,7 @@ export const SettingsForm = styled.form`
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+
     label {
         font-size: 16px;
         line-height: 24px;
@@ -307,44 +260,48 @@ export const SettingsForm = styled.form`
         margin-bottom: 4px;
         display: block;
     }
+
     input {
         background-color: #ffffff;
         border: 1px solid rgba(0, 0, 0, 0.2);
         border-radius: 6px;
         padding: 13px 19px;
-    }
 
-    input::-webkit-input-placeholder {
+        &::placeholder {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.3);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &::-webkit-input-placeholder {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.3);
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        &:-ms-input-placeholder {
         background-color: transparent;
         color: rgba(0, 0, 0, 0.3);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-    }
-    input:-ms-input-placeholder {
+        }
+
+        &::-ms-input-placeholder {
         background-color: transparent;
         color: rgba(0, 0, 0, 0.3);
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 24px;
-    }
-    input::-ms-input-placeholder {
-        background-color: transparent;
-        color: rgba(0, 0, 0, 0.3);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-    }
-    input::placeholder {
-        background-color: transparent;
-        color: rgba(0, 0, 0, 0.3);
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
+        }
     }
 
     @media screen and (max-width: 620px) {
@@ -356,38 +313,37 @@ export const SettingsForm = styled.form`
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+
         label {
             font-size: 14px;
             line-height: 21px;
             color: #c4c4c4;
             margin-bottom: 6px;
         }
+
         input {
             border-radius: 30px;
             padding: 9px 17px;
-        }
+            &::placeholder {
+                font-size: 14px;
+                line-height: 21px;
+            }
 
-        input::-webkit-input-placeholder {
+            &::-webkit-input-placeholder {
             font-size: 14px;
             line-height: 21px;
-        }
-        input:-ms-input-placeholder {
-            font-size: 14px;
-            line-height: 21px;
-        }
-        input::-ms-input-placeholder {
-            font-size: 14px;
-            line-height: 21px;
-        }
-        input::placeholder {
-            font-size: 14px;
-            line-height: 21px;
-        }
+            }
+
+            &:-ms-input-placeholder {
+                font-size: 14px;
+                line-height: 21px;
+            }
     }
 `
 export const SettingsDiv = styled.div`
     display: inline-block;
     margin: 0 7px 20px;
+
     @media screen and (max-width: 620px) {
         display: inline-block;
         margin: 0 0px 18px;
@@ -395,6 +351,7 @@ export const SettingsDiv = styled.div`
 `
 export const SettingInfo = styled.input`
     width: 300px;
+
     @media screen and (max-width: 620px) {
         width: 100%;
     }
@@ -404,6 +361,7 @@ export const SettingsLName = styled(SettingInfo)``
 export const SettingsCity = styled(SettingInfo)``
 export const SettingsPhone = styled.input`
     width: 614px;
+
     @media screen and (max-width: 620px) {
         width: 100%;
     }
@@ -418,12 +376,14 @@ export const SettingsBtn = styled.button`
     background-color: #009ee4;
     border-radius: 6px;
     border: 1px solid #009ee4;
-    :enabled {
+
+    &:enabled {
         :hover {
             background-color: #0080c1;
         }
     }
-    :disabled {
+
+    &:disabled {
         background-color: gray;
         border: gray;
         cursor: not-allowed;
@@ -431,6 +391,7 @@ export const SettingsBtn = styled.button`
             background-color: lightgray;
         }
     }
+
     @media screen and (max-width: 620px) {
         font-size: 16px;
         line-height: 1;
@@ -450,6 +411,7 @@ export const SettingsBtnNotActive = styled.button`
     border-radius: 6px;
     border: 1px solid #009ee4;
     cursor: not-allowed;
+
     @media screen and (max-width: 620px) {
         font-size: 16px;
         line-height: 1;
@@ -464,6 +426,7 @@ export const MainTitle = styled.h3`
     line-height: 70px;
     font-weight: 500;
     color: #000000;
+
     @media screen and (max-width: 620px) {
         margin-bottom: 30px;
         font-size: 18px;
@@ -488,26 +451,31 @@ export const Cards = styled.div`
     scrollbar-width: thin;
     scrollbar-width: 0px;
     height: 441px;
-    ::-webkit-scrollbar {
+
+    &::-webkit-scrollbar {
         width: 0px;
         background-color: #009ee4;
     }
-    ::-webkit-scrollbar-thumb {
+
+    &::-webkit-scrollbar-thumb {
         background-color: #0080c1;
         border-radius: 3px;
     }
+
     @media screen and (max-width: 1158px) {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: (270px) [3];
         grid-template-columns: repeat(3, 270px);
     }
+
     @media screen and (max-width: 890px) {
         display: -ms-grid;
         display: grid;
         -ms-grid-columns: (270px) [2];
         grid-template-columns: repeat(2, 270px);
     }
+
     @media screen and (max-width: 620px) {
         display: -ms-grid;
         display: grid;
@@ -523,6 +491,7 @@ export const Cards = styled.div`
 `
 export const CardItem = styled.div`
     margin: 0;
+
     @media screen and (max-width: 620px) {
         margin: 0;
     }
@@ -537,6 +506,7 @@ export const CardsCard = styled.div`
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+
     @media screen and (max-width: 620px) {
         width: 137px;
         height: 293px;
@@ -553,6 +523,7 @@ export const CardImage = styled.div`
     width: 270px;
     height: 270px;
     background-color: #f0f0f0;
+
     img {
         width: 100%;
         height: 100%;
@@ -560,10 +531,12 @@ export const CardImage = styled.div`
         -o-object-fit: cover;
         object-fit: cover;
     }
+
     @media screen and (max-width: 620px) {
         width: 137px;
         height: 132px;
         background-color: #d9d9d9;
+
         img {
             width: 100%;
             height: 100%;
@@ -584,6 +557,7 @@ export const CardTitle = styled.h3`
     margin-top: 20px;
     overflow: hidden;
     text-overflow: ellipsis;
+
     @media screen and (max-width: 620px) {
         height: 51px;
         font-size: 14px;
@@ -593,41 +567,34 @@ export const CardTitle = styled.h3`
         margin-top: 10px;
     }
 `
-export const CardPrice = styled.p`
+export const CardPricePlace = styled.p`
     color: #000000;
     font-size: 22px;
     font-weight: 500;
     line-height: 33px;
-    margin-bottom: 10px;
 
     @media screen and (max-width: 620px) {
         font-size: 16px;
         line-height: 24px;
     }
 `
-export const CardPlace = styled.p`
-    font-size: 16px;
-    line-height: 21px;
-    color: #5f5f5f;
-    margin-bottom: 4px;
-    @media screen and (max-width: 620px) {
-        font-size: 12px;
-        line-height: 16px;
-        color: #5f5f5f;
-    }
+export const CardPrice = styled(CardPricePlace)`
+    margin-bottom: 10px;
 `
+export const CardPlace = styled(CardPricePlace)``
 
 export const CardDate = styled.p`
     font-size: 16px;
     line-height: 21px;
     color: #5f5f5f;
+
     @media screen and (max-width: 620px) {
         font-size: 12px;
         line-height: 16px;
         color: #5f5f5f;
     }
 `
-export const error = styled.div`
+export const Error = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;

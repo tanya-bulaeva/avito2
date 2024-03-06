@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
 a,
 a:visited {
   text-decoration: none;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto-Black", sans-serif;
   cursor: pointer;
 }
 
@@ -33,22 +33,14 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto-Black", sans-serif;
   color: #000000;
 }
 
 div,
 button,
 a {
-  font-family: 'Roboto', sans-serif;
-}
-.btn-hov01:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid #FFFFFF;
-}
-
-.btn-hov02:hover {
-  background-color: #0080C1;
+  font-family: "Roboto-Black", sans-serif;
 }
 
 @font-face {
