@@ -35,7 +35,9 @@ export default function Reviews({
             <S.ContainerBg>
                 <S.ModalBlock>
                     <S.ModalContent>
-                        <S.ModalTitle>Отзывы о товаре</S.ModalTitle>
+                        <S.ModalTitle onClick={handleModal}>
+                            Отзывы о товаре
+                        </S.ModalTitle>
                         <S.ModalBtnClose onClick={handleModal}>
                             <S.ModalBtnCloseLine></S.ModalBtnCloseLine>
                         </S.ModalBtnClose>
@@ -61,7 +63,6 @@ export default function Reviews({
                                         ></S.FormNewArtArea>
                                     </S.FormNewArtBlock>
                                     <S.FormNewArtBtnPub
-                                        className="btn-hov02"
                                         id="btnPublish"
                                         onClick={handleNewComments}
                                         disabled={comment}

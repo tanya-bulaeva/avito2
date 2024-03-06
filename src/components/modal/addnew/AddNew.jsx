@@ -141,15 +141,13 @@ export default function AddNew({ modal, handleModal, currentAd }) {
         }
     }
 
-    //console.log(currentAd.images.length);
-
     return (
         <S.Wrapper style={{ visibility: modal ? "visible" : "hidden" }}>
             <S.Backdrop onClick={handleModal} />
             <S.ContainerBg>
                 <S.ModalBlock>
                     <S.ModalContent>
-                        <S.ModalTitle>
+                        <S.ModalTitle onClick={handleModal}>
                             {currentAd ? "Редактировать" : "Новое объявлениe"}
                         </S.ModalTitle>
                         <S.ModalBbtnClose onClick={handleModal}>
@@ -161,7 +159,7 @@ export default function AddNew({ modal, handleModal, currentAd }) {
                                     Название
                                 </S.LabelForm>
                                 {errorsForm.title && (
-                                    <S.error>{errorsForm.title}</S.error>
+                                    <S.Error>{errorsForm.title}</S.Error>
                                 )}
                                 <S.FormNewArtInput
                                     type="text"
@@ -177,7 +175,7 @@ export default function AddNew({ modal, handleModal, currentAd }) {
                             <S.FormNewArtBlock>
                                 <label htmlFor="text">Описание</label>
                                 {errorsForm.description && (
-                                    <S.error>{errorsForm.description}</S.error>
+                                    <S.Error>{errorsForm.description}</S.Error>
                                 )}
                                 <S.FormNewArtArea
                                     name="text"
@@ -323,7 +321,7 @@ export default function AddNew({ modal, handleModal, currentAd }) {
                             <S.BlockPrice>
                                 <label htmlFor="price">Цена</label>
                                 {errorsForm.price && (
-                                    <S.error>{errorsForm.price}</S.error>
+                                    <S.Error>{errorsForm.price}</S.Error>
                                 )}
                                 <S.FormNewArtInputPrice
                                     name="price"
@@ -337,10 +335,9 @@ export default function AddNew({ modal, handleModal, currentAd }) {
                                 <S.FormNewArtInputPriceCover></S.FormNewArtInputPriceCover>
                             </S.BlockPrice>
                             <S.FormNewArtBtnPub
-                                className="btn-hov02"
                                 id="btnPublish"
                             >
-                                {error && <S.error>{error}</S.error>}
+                                {error && <S.Error>{error}</S.Error>}
 
                                 <S.ButtonText
                                     onClick={

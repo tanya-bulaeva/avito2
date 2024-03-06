@@ -19,7 +19,7 @@ export const Container = styled.div`
     margin: 0 auto;
     background-color: #ffffff;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 590px) {
         width: 100%;
         min-width: 320px;
         min-height: 100vh;
@@ -28,17 +28,8 @@ export const Container = styled.div`
 `
 export const Header = styled.header`
     background-color: #009ee4;
+
     @media screen and (max-width: 590px) {
-        padding: 0 20px;
-        width: 100%;
-        height: 55px;
-        -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
-        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
-        position: fixed;
-        left: 0;
-        top: 0;
-        z-index: 3;
-        padding: 0 20px;
     }
 `
 export const HeaderNav = styled.nav`
@@ -55,12 +46,16 @@ export const HeaderNav = styled.nav`
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: end;
+
     @media screen and (max-width: 768px) {
-        height: 55px;
         -webkit-box-pack: start;
         -ms-flex-pack: start;
         justify-content: start;
-        padding: 0;
+        padding: 10;
+    }
+
+    @media screen and (max-width: 590px) {
+        height: 55px;
     }
 `
 
@@ -73,6 +68,11 @@ export const Btn = styled.button`
     color: #ffffff;
     font-size: 16px;
     line-height: 1;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+    }
 `
 
 export const HeaderBtnPutAd = styled.button`
@@ -84,6 +84,12 @@ export const HeaderBtnPutAd = styled.button`
     color: #ffffff;
     font-size: 16px;
     line-height: 1;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+    }
+
     @media screen and (max-width: 590px) {
         display: none;
     }
@@ -98,13 +104,41 @@ export const HeaderBtnLk = styled.button`
     color: #ffffff;
     font-size: 16px;
     line-height: 1;
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+    }
+
     @media screen and (max-width: 590px) {
         display: none;
     }
 `
+export const HeaderBtnLkMob = styled.button`
+    display: none;
 
+    @media screen and (max-width: 590px) {
+        display: block;
+        width: 60px;
+        height: 40px;
+        border: 1px solid #ffffff;
+        border-radius: 6px;
+        background-color: #009ee4;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 1;
+        position: absolute;
+        right: 10px;
+    }
+
+    &:hover {
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid #ffffff;
+    }
+`
 export const HeaderLogo = styled.div`
     display: none;
+
     @media screen and (max-width: 590px) {
         display: block;
     }

@@ -5,86 +5,16 @@ export const Container = styled.div`
     width: 100%;
     margin: 0 auto;
     background-color: #ffffff;
+
     @media screen and (max-width: 768px) {
         width: 100%;
         min-width: 320px;
         padding: 0 0px;
     }
 `
-
-export const Header = styled.header`
-    background-color: #009ee4;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
-export const HeaderNav = styled.nav`
-    max-width: 1178px;
-    margin: 0 auto;
-    padding: 0 10px;
-    height: 79px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: end;
-`
-export const HeaderLogo = styled.div`
-    display: none;
-    @media screen and (max-width: 590px) {
-        display: block;
-    }
-`
-export const LogoMobLink = styled(NavLink)`
-    @media screen and (max-width: 590px) {
-        display: block;
-        width: 32px;
-        height: 32px;
-    }
-`
-export const LogoMobImg = styled.a`
-    @media screen and (max-width: 590px) {
-        width: 32px;
-        height: auto;
-        display: block;
-        -o-object-fit: cover;
-        object-fit: cover;
-    }
-`
-export const HeaderBtnPutAd = styled.button`
-    width: 232px;
-    height: 40px;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
-export const HeaderBtnLk = styled.button`
-    width: 173px;
-    height: 40px;
-    margin-left: 10px;
-    border: 1px solid #ffffff;
-    border-radius: 6px;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 16px;
-    line-height: 1;
-    @media screen and (max-width: 590px) {
-        display: none;
-    }
-`
 export const CardSkeleton = styled.div`
-    width: 480px;
-    height: 480px;
+    width: 320px;
+    height: 320px;
     background-color: rgb(217, 217, 217);
 `
 
@@ -106,6 +36,7 @@ export const MainContainer = styled.div`
     max-width: 1178px;
     margin: 0 auto;
     padding: 0px 5px;
+
     @media screen and (max-width: 768px) {
         padding: 0 20px 0;
     }
@@ -123,6 +54,7 @@ export const MainMenu = styled.div`
     justify-content: space-between;
     padding: 11px 0;
     padding: 43px 5px 77px;
+
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -152,7 +84,7 @@ export const BtnForm = styled.div`
     display: flex;
     gap: 10px;
 `
-export const MenuBtnSerch = styled.button`
+export const MenuBtnSearch = styled.button`
     width: 241px;
     height: 50px;
     background-color: #009ee4;
@@ -161,16 +93,21 @@ export const MenuBtnSerch = styled.button`
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
+
+    &:hover {
+        background-color: #0080c1;
+    }
 `
 export const MainArctic = styled.div`
     max-width: 1178px;
     padding: 0 0 70px;
     margin: 0 auto;
     padding: 0 5px 70px;
+
     @media screen and (max-width: 768px) {
         max-width: 1178px;
         width: 100%;
-        padding: 55px 0 0px;
+        padding: 0px 0px;
         margin: 0 auto;
     }
 `
@@ -204,9 +141,11 @@ export const ArticContent = styled.div`
 export const ArticleLeft = styled.div`
     max-width: 480px;
     margin-right: 54px;
+
     @media screen and (max-width: 890px) {
         margin-right: 20px;
     }
+
     @media screen and (max-width: 768px) {
         max-width: 100%;
         width: 100%;
@@ -243,6 +182,7 @@ export const ArticleFillImg = styled.div`
         border-top: 2px solid #0080c1;
         border-left: 2px solid #0080c1;
     }
+
     @media screen and (max-width: 768px) {
         max-width: 100%;
         width: 100%;
@@ -261,15 +201,33 @@ export const ArticleFillImg = styled.div`
         -ms-flex-pack: center;
         justify-content: center;
         position: relative;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 23px;
+            height: 23px;
+            background-color: transparent;
+            border-top: 2px solid #000000;
+            border-left: 2px solid #000000;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            position: absolute;
+            top: 24px;
+            left: 32px;
+            cursor: pointer;
+        }
     }
 `
 
 export const MobClose = styled.div`
     display: none;
+
     &:hover::before {
         border-top: 2px solid #0080c1;
         border-left: 2px solid #0080c1;
     }
+
     @media screen and (max-width: 768px) {
         display: block;
         width: 23px;
@@ -288,8 +246,9 @@ export const MobClose = styled.div`
 export const ArticleImg = styled.div`
     width: 480px;
     height: 480px;
-    background-color: transparent;
+    background-color: #f0f0f0;
     margin: 0 5px;
+
     img {
         width: 480px;
         height: 480px;
@@ -297,7 +256,11 @@ export const ArticleImg = styled.div`
         -o-object-fit: contain;
         object-fit: contain;
     }
+
     @media screen and (max-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         min-width: 320px;
         height: auto;
@@ -327,6 +290,7 @@ export const ArticleImgBar = styled.div`
     justify-content: left;
     overflow: hidden;
     margin-left: -5px;
+
     @media screen and (max-width: 768px) {
         display: none;
     }
@@ -339,26 +303,31 @@ export const ArticleImgBarDiv = styled.div`
     background-color: transparent;
     border: 2px solid #f0f0f0;
     margin: 0 5px;
+    display: flex;
+    align-items: center;
+
     img {
-        width: 88px;
-        height: 88px;
+        width: 100%;
+        height: auto;
         display: block;
-        cursor: pointer;
-        -o-object-fit: contain;
-        object-fit: contain;
+        -o-object-fit: cover;
+        object-fit: cover;
     }
-    :hover {
+
+    &:hover {
         transform: scale(1.03);
         transition: 2seconds ease-in-out;
         border: 3px solid #009ee4;
     }
-    :active {
+
+    &:active {
         border: 3px solid #009ee4;
     }
 `
 
 export const ArticleImgBarMob = styled.div`
     display: none;
+
     @media screen and (max-width: 768px) {
         display: block;
         width: 68px;
@@ -376,9 +345,10 @@ export const ArticleImgBarMob = styled.div`
 `
 
 export const ImgBarMobCircle = styled.div`
-    :active {
+    &:active {
         background-color: #ffffff;
     }
+
     @media screen and (max-width: 768px) {
         width: 8px;
         height: 8px;
@@ -392,6 +362,7 @@ export const ImgBarMobCircleActive = styled(ImgBarMobCircle)`
 
 export const ArticleRight = styled.div`
     max-width: 621px;
+
     @media screen and (max-width: 768px) {
         max-width: 100%;
         width: 100%;
@@ -414,6 +385,7 @@ export const ArticleTitle = styled.h3`
     line-height: 46px;
     font-weight: 500;
     color: #000000;
+
     @media screen and (max-width: 768px) {
         margin-bottom: 10px;
         font-size: 18px;
@@ -421,18 +393,9 @@ export const ArticleTitle = styled.h3`
     }
 `
 
-export const Title = styled.div`
-    font-size: 32px;
-    line-height: 46px;
-    font-weight: 500;
-    color: #000000;
-    @media screen and (max-width: 768px) {
-        font-size: 18px;
-        line-height: 1;
-    }
-`
 export const ArticleInfo = styled.div`
     margin-bottom: 34px;
+
     @media screen and (max-width: 768px) {
         margin-bottom: 20px;
     }
@@ -442,7 +405,12 @@ export const ArticleDate = styled.p`
     line-height: 21px;
     color: #5f5f5f;
     margin-bottom: 4px;
+
     @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 17px;
+        color: #5f5f5f;
+        margin-bottom: 4px;
     }
 `
 export const ArticleCity = styled.p`
@@ -450,6 +418,7 @@ export const ArticleCity = styled.p`
     line-height: 21px;
     color: #5f5f5f;
     margin-bottom: 4px;
+
     @media screen and (max-width: 768px) {
         font-size: 14px;
         line-height: 17px;
@@ -461,6 +430,7 @@ export const ArticleLink = styled.a`
     font-size: 16px;
     line-height: 21px;
     color: #009ee4;
+
     @media screen and (max-width: 768px) {
         font-size: 14px;
         line-height: 19px;
@@ -472,6 +442,7 @@ export const ArticlePrice = styled.p`
     line-height: 39px;
     font-weight: 700;
     margin-bottom: 20px;
+
     @media screen and (max-width: 768px) {
         font-size: 18px;
         line-height: 25px;
@@ -480,30 +451,37 @@ export const ArticlePrice = styled.p`
     }
 `
 export const ArticleBtn = styled.button`
-background-color: #009EE4;
-border-radius: 6px;
-border: 1px solid #009EE4;
-width: 214px;
-height: 62px;
-font-size: 16px;
-font-weight: 500;
-line-height: 22px;
-color: #FFFFFF;
-font-family: 'Roboto', sans-serif;
-span {
-    display: block;
-    font-size: 14px;
-    font-weight: 400;
-}
-@media screen and (max-width: 768px) {
-    width: 100%;
-    height: 57px;
-    font-size: 14px;
-    line-height: 20px;
+    background-color: #009EE4;
+    border-radius: 6px;
+    border: 1px solid #009EE4;
+    width: 214px;
+    height: 62px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
     color: #FFFFFF;
-    span{
-        font-size: 12px;
+    font-family: "Roboto-Black", sans-serif;
+    
+    &:hover {
+        background-color: #0080C1;
     }
+
+    span {
+        display: block;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        height: 57px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #FFFFFF;
+
+        span{
+            font-size: 12px;
+        }
 
 `
 
@@ -520,6 +498,7 @@ export const ArticleAuthor = styled.div`
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+
     @media screen and (max-width: 768px) {
         margin-top: 30px;
         margin-bottom: 30px;
@@ -531,6 +510,7 @@ export const AuthorImg = styled.div`
     height: 40px;
     background-color: #f0f0f0;
     border-radius: 50%;
+
     img {
         width: 100%;
         height: auto;
@@ -548,6 +528,7 @@ export const AuthorName = styled(NavLink)`
     line-height: 26px;
     font-weight: 600;
     color: #009ee4;
+
     @media screen and (max-width: 768px) {
         font-size: 18px;
         line-height: 23px;
@@ -555,12 +536,13 @@ export const AuthorName = styled(NavLink)`
     }
 `
 export const AuthorAbout = styled.p`
-font-size: 16px;
-line-height: 32px;
-color: #5F5F5F;
-@media screen and (max-width: 768px) {
-    font-size: 14px;
-    line-height: 28px;
+    font-size: 16px;
+    line-height: 32px;
+    color: #5F5F5F;
+
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+        line-height: 28px;
 `
 
 export const MainTitle = styled.h3`
@@ -570,6 +552,7 @@ export const MainTitle = styled.h3`
     line-height: 46px;
     font-weight: 500;
     color: #000000;
+
     @media screen and (max-width: 768px) {
         margin-bottom: 14px;
         padding: 0;
@@ -582,6 +565,7 @@ export const MainContent = styled.div`
     max-width: 792px;
     width: 100%;
     padding: 0 5px 117px;
+
     @media screen and (max-width: 768px) {
         width: 100%;
         margin: 0 auto;

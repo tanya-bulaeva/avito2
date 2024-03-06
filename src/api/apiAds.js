@@ -49,7 +49,6 @@ export async function newToken() {
         throw new Error("Ошибка сервера")
     }
     const data = await response.json()
-    console.log(data)
     if (data) {
         if (data.access_token)
             localStorage.setItem("access_token", data.access_token)
@@ -108,24 +107,6 @@ export async function postNewUserPhoto(formData) {
     const userPhoto = await response.json()
     return userPhoto
 }
-
-// export async function getAdsUser(){
-//   let accessToken = localStorage.getItem("access_token");
-//   if (isExpired(accessToken)) {
-//     await newToken();
-//     accessToken = localStorage.getItem("access_token");
-//   }
-//   const response = await fetch(`${baseHost}/ads/me`, {
-//     method: "GET",
-//     headers: {
-//       Authorization: `Bearer ${accessToken}`,
-//       "content-type": "application/json",
-//     },
-//   })
-//   const data = await response.json()
-//   console.log(data)
-//   return data
-// }
 
 export async function getAdComments(params, ad_id) {
     let url = new URL(`ads/${ad_id}/comments`, baseHost)

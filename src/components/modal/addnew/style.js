@@ -4,8 +4,6 @@ export const Wrapper = styled.div`
     width: 100%;
     min-height: 100%;
     overflow: hidden;
-    @media screen and (max-width: 600px) {
-    }
 `
 
 export const ContainerBg = styled.div`
@@ -13,8 +11,6 @@ export const ContainerBg = styled.div`
     height: 100vh;
     margin: 0 auto;
     background-color: #f4f5f6;
-    @media screen and (max-width: 600px) {
-    }
 `
 export const inputChange = styled.input`
     display: none;
@@ -25,10 +21,12 @@ export const ModalBlock = styled.div`
     left: calc(50% - (600px / 2));
     top: 60px;
     opacity: 1;
+
     @media screen and (max-width: 600px) {
         position: absolute;
         z-index: 5;
-        left: 0px;
+        right: 10px;
+        left: 10px;
         top: 55px;
         opacity: 1;
     }
@@ -51,6 +49,7 @@ export const ModalContent = styled.div`
     background-color: #ffffff;
     border-radius: 12px;
     position: relative;
+
     @media screen and (max-width: 600px) {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -73,16 +72,19 @@ export const ModalTitle = styled.h3`
     line-height: 46px;
     font-weight: 500;
     color: #000000;
-    :hover::before {
+
+    &:hover::before {
         border-top: 2px solid #0080c1;
         border-left: 2px solid #0080c1;
     }
+
     @media screen and (max-width: 600px) {
         font-size: 24px;
         line-height: 29px;
         padding: 0 0 0 26px;
         position: relative;
-        ::before {
+
+        &::before {
             content: "";
             display: block;
             width: 12px;
@@ -107,6 +109,7 @@ export const ModalBbtnClose = styled.div`
     right: 50px;
     z-index: 3;
     cursor: pointer;
+
     @media screen and (max-width: 600px) {
         display: none;
     }
@@ -115,13 +118,16 @@ export const ModalBtnCloseLine = styled.div`
     position: relative;
     width: 100%;
     height: 100%;
-    :hover:: before {
+
+    &:hover:: before {
         background-color: #0080c1;
     }
-    :hover:: after {
+
+    &:hover:: after {
         background-color: #0080c1;
     }
-    ::before {
+
+    &::before {
         content: "";
         position: absolute;
         width: 30px;
@@ -130,28 +136,21 @@ export const ModalBtnCloseLine = styled.div`
         background-color: #d9d9d9;
         top: 47%;
         right: -4px;
-    }
-    ::after {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 2px;
-        border-radius: 2px;
-        background-color: #d9d9d9;
-        top: 47%;
-        right: -4px;
-    }
-    ::before {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
     }
 
-    ::after {
+    &::after {
+        content: "";
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        border-radius: 2px;
+        background-color: #d9d9d9;
+        top: 47%;
+        right: -4px;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
-    }
-
-    @media screen and (max-width: 600px) {
     }
 `
 export const ModalFormNewArt = styled.form`
@@ -164,6 +163,7 @@ export const ModalFormNewArt = styled.form`
     -ms-flex-direction: column;
     flex-direction: column;
     width: 100%;
+
     label {
         margin-bottom: 4px;
         font-size: 16px;
@@ -173,6 +173,7 @@ export const ModalFormNewArt = styled.form`
 
     @media screen and (max-width: 600px) {
         margin-top: 22px;
+
         label {
             margin-bottom: 5px;
             font-size: 14px;
@@ -195,6 +196,14 @@ export const FormNewArtBlock = styled.div`
     -ms-flex-direction: column;
     flex-direction: column;
     margin-bottom: 20px;
+
+    label {
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
     @media screen and (max-width: 600px) {
         width: 100%;
         display: -webkit-box;
@@ -205,12 +214,17 @@ export const FormNewArtBlock = styled.div`
         -ms-flex-direction: column;
         flex-direction: column;
         margin-bottom: 18px;
+
+        label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
     }
 `
 export const BlockPrice = styled(FormNewArtBlock)`
     position: relative;
-    @media screen and (max-width: 600px) {
-    }
 `
 
 export const LabelForm = styled.label`
@@ -221,78 +235,81 @@ export const LabelForm = styled.label`
 `
 
 export const FormNewArtInput = styled.input`
-padding: 13px 19px;
-background: #FFFFFF;
-border: 1px solid rgba(0, 0, 0, 0.2);
-border-radius: 6px;
-font-size: 16px;
-line-height: 1;
-width: 100%;
-font-size: 16px;
-line-height: 24px;
-}
-
-::-webkit-input-placeholder {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0000004D;
-}
-
-:-ms-input-placeholder {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0000004D;
-}
-
-::-ms-input-placeholder {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0000004D;
-}
-
-::placeholder {
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 24px;
-color: #0000004D;
-}
-
-@media screen and (max-width: 600px) {
-    padding: 9px 17px;
-    background: #FFFFFF;
+    padding: 13px 19px;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 30px;
+    border-radius: 6px;
     font-size: 16px;
     line-height: 1;
     width: 100%;
-    ::-webkit-input-placeholder {
-        font-size: 14px;
-        line-height: 21px;
-        color: #C4C4C4;
-      }
-:-ms-input-placeholder {
-        font-size: 14px;
-        line-height: 21px;
-        color: #C4C4C4;
-      }
-::-ms-input-placeholder {
-        font-size: 14px;
-        line-height: 21px;
-        color: #C4C4C4;
-      }
-::placeholder {
-        font-size: 14px;
-        line-height: 21px;
-        color: #C4C4C4;
-      }
-}
+    font-size: 16px;
+    line-height: 24px;
+
+    &::-webkit-input-placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0000004d;
+    }
+
+    &:-ms-input-placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0000004d;
+    }
+
+    &::-ms-input-placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0000004d;
+    }
+
+    &::placeholder {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0000004d;
+    }
+
+    @media screen and (max-width: 600px) {
+        padding: 9px 17px;
+        background: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 30px;
+        font-size: 16px;
+        line-height: 1;
+        width: 100%;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #c4c4c4;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #c4c4c4;
+        }
+
+        &::-ms-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #c4c4c4;
+        }
+
+        &::placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #c4c4c4;
+        }
+    }
 `
 
 export const FormNewArtArea = styled.textarea`
@@ -302,13 +319,13 @@ export const FormNewArtArea = styled.textarea`
     border-radius: 6px;
     font-size: 16px;
     line-height: 1;
-    font-family: "Roboto", sans-serif;
+    font-family: "Roboto-Black", sans-serif;
     width: 100%;
     max-height: 200px;
     font-size: 16px;
     line-height: 24px;
 
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -317,7 +334,7 @@ export const FormNewArtArea = styled.textarea`
         color: #0000004d;
     }
 
-    :-ms-input-placeholder {
+    &:-ms-input-placeholder {
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -326,7 +343,7 @@ export const FormNewArtArea = styled.textarea`
         color: #0000004d;
     }
 
-    ::-ms-input-placeholder {
+    &::-ms-input-placeholder {
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -335,7 +352,7 @@ export const FormNewArtArea = styled.textarea`
         color: #0000004d;
     }
 
-    ::placeholder {
+    &::placeholder {
         font-family: "Roboto", sans-serif;
         font-style: normal;
         font-weight: 400;
@@ -354,22 +371,26 @@ export const FormNewArtArea = styled.textarea`
         font-family: "Roboto", sans-serif;
         width: 100%;
         max-height: 107px;
-        ::-webkit-input-placeholder {
+
+        &::-webkit-input-placeholder {
             font-size: 14px;
             line-height: 21px;
             color: #c4c4c4;
         }
-        :-ms-input-placeholder {
+
+        &:-ms-input-placeholder {
             font-size: 14px;
             line-height: 21px;
             color: #c4c4c4;
         }
-        ::-ms-input-placeholder {
+
+        &::-ms-input-placeholder {
             font-size: 14px;
             line-height: 21px;
             color: #c4c4c4;
         }
-        ::placeholder {
+
+        &::placeholder {
             font-size: 14px;
             line-height: 21px;
             color: #c4c4c4;
@@ -381,14 +402,17 @@ export const FormNewArtP = styled.p`
     line-height: 24px;
     color: #000000;
     margin-bottom: 10px;
+
     span {
         margin-left: 10px;
         color: rgba(0, 0, 0, 0.3);
     }
+
     @media screen and (max-width: 600px) {
         font-size: 14px;
         line-height: 21px;
         margin-bottom: 10px;
+
         span {
             display: block;
             margin-left: 0px;
@@ -413,8 +437,10 @@ export const FormNewArtBarImg = styled.div`
     justify-content: space-between;
     margin-bottom: 10px;
     overflow: hidden;
+
     @media screen and (max-width: 600px) {
         width: 278px;
+        row-gap: 10px;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -448,6 +474,7 @@ export const FormNewArtImg = styled.div`
         object-fit: cover;
         z-index: 2;
     }
+
     @media screen and (max-width: 600px) {
         display: block;
         width: 90px;
@@ -455,6 +482,7 @@ export const FormNewArtImg = styled.div`
         height: 90px;
         background-color: #f0f0f0;
         margin: 0 5px;
+
         img {
             display: block;
             width: 100%;
@@ -472,6 +500,7 @@ export const FormNewArtImgCover = styled.label`
     left: 0;
     background-color: #f0f0f0;
     z-index: -1;
+
     &::after,
     &::before {
         content: "";
@@ -484,15 +513,13 @@ export const FormNewArtImgCover = styled.label`
         right: calc(50% - (30px / 2));
     }
 
-    ::before {
+    &::before {
         -webkit-transform: rotate(90deg);
         transform: rotate(90deg);
     }
-    :hover:: before,
-:hover:: after {
+    &:hover:: before,
+    &:hover:: after {
         background-color: #009ee4;
-    }
-    @media screen and (max-width: 600px) {
     }
 `
 export const FormNewArtInputPrice = styled.input`
@@ -506,6 +533,34 @@ export const FormNewArtInputPrice = styled.input`
     font-size: 16px;
     line-height: 24px;
     color: #000000;
+
+    &::-webkit-input-placeholder {
+        text-align: end;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &:-ms-input-placeholder {
+        text-align: end;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
+    &::-ms-input-placeholder {
+        text-align: end;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+    }
+
     @media screen and (max-width: 600px) {
         padding: 9px 17px;
         background: #ffffff;
@@ -514,43 +569,68 @@ export const FormNewArtInputPrice = styled.input`
         font-size: 16px;
         line-height: 1;
         width: 100%;
+
+        &::-webkit-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+        &:-ms-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+        &::-ms-input-placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
+
+        &::placeholder {
+            font-size: 14px;
+            line-height: 21px;
+            color: #000000;
+        }
     }
 `
 export const FormNewArtInputPriceCover = styled.div`
-width: 24px;
-  height: 24px;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  position: absolute;
-  bottom: 13px;
-  left: 170px;
-  z-index: 0;
-  background-color: #FFFFFF;
-}
-::after {
-  content: "\u20bd";
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  font-size: 16px;
-  line-height: 24px;
-  color: #000000;
-  z-index: 2;
-}
-@media screen and (max-width: 600px) {
-    width: 21px;
-    height: 21px;
-    font-size: 14px;
-    line-height: 21px;
-    bottom: 9px;
-    left: auto;
-    right: 18px;
-::after {
-    font-size: 14px;
-    line-height: 21px;
-  }
-}
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    position: absolute;
+    bottom: 13px;
+    left: 170px;
+    z-index: 0;
+    background-color: #ffffff;
+
+    &::after {
+        content: "\u20bd";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        font-size: 16px;
+        line-height: 24px;
+        color: #000000;
+        z-index: 2;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: 21px;
+        height: 21px;
+        font-size: 14px;
+        line-height: 21px;
+        bottom: 9px;
+        left: auto;
+        right: 18px;
+        &::after {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
 `
 export const FormNewArtBtnPub = styled.button`
     margin-top: 10px;
@@ -562,6 +642,10 @@ export const FormNewArtBtnPub = styled.button`
     font-size: 16px;
     line-height: 24px;
     color: #ffffff;
+    &: hover {
+      background-color: #0080C1;  
+    }
+    
     @media screen and (max-width: 600px) {
         margin-top: 10px;
         width: 100%;
@@ -590,17 +674,19 @@ export const Backdrop = styled.div`
     left: 0;
 `
 
-export const error = styled.div`
+export const Error = styled.div`
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
     font-family: "Roboto", sans-serif;
     color: #dd4333;
 `
+
 export const ImageBlock = styled.div`
     display: flex;
     flex-direction: column;
 `
+
 export const BtnDelete = styled.button`
     margin-top: 10px;
     width: 90px;
